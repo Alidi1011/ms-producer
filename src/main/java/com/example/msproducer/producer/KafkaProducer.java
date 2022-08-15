@@ -23,7 +23,7 @@ public class KafkaProducer {
     future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
       @Override
       public void onSuccess(SendResult<String, String> result) {
-        log.debug("Message {} has been sent ", message);
+        log.info("Message {} has been sent ", message);
       }
       @Override
       public void onFailure(Throwable ex) {
