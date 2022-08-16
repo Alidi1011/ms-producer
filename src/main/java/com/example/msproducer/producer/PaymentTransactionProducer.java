@@ -13,7 +13,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class KafkaProducer {
+public class PaymentTransactionProducer {
 
   private final KafkaTemplate<String, PaymentDto> kafkaTemplate;
 
