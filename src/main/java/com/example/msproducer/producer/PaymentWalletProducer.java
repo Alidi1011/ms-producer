@@ -27,7 +27,7 @@ public class PaymentWalletProducer {
     future.addCallback(new ListenableFutureCallback<SendResult<String, PaymentDto>>() {
       @Override
       public void onSuccess(SendResult<String, PaymentDto> result) {
-        log.info("Message {} has been sent ", paymentDto);
+        log.info("Message with PaymentWalletProducer {} has been sent ", paymentDto);
       }
       @Override
       public void onFailure(Throwable ex) {

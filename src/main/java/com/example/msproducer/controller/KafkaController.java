@@ -23,12 +23,6 @@ public class KafkaController {
   public ResponseEntity<String> sendMessage(@RequestBody PaymentDto paymentDto) {
     log.info("Sending message {}", paymentDto);
     paymentTransactionProducer.sendMessage(paymentDto);
-    return ResponseEntity.ok("Message sent");
-  }
-
-  @PostMapping("/sendPaymentWallet")
-  public ResponseEntity<String> sendMessageWallet(@RequestBody PaymentDto paymentDto) {
-    log.info("Sending message {}", paymentDto);
     paymentWalletProducer.sendMessage(paymentDto);
     return ResponseEntity.ok("Message sent");
   }
