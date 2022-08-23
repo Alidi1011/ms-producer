@@ -1,11 +1,11 @@
 package com.example.msproducer.enums;
 
-public enum PaymentTypeEnum {
+public enum PaymentModeEnum {
   YANKI("YANKI"),
   TRANSFER("TRANSFER");
   private final String value;
 
-  PaymentTypeEnum(String value) {
+  PaymentModeEnum(String value) {
     this.value = value;
   }
 
